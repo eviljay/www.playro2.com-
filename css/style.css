@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,800italic);
+@import url(animate.css);
+
+html, body {
+  height: 100%; 
+}
+
+body {
+	overflow: hidden;
+}
+
+#bg {
+	background: url('../img/bg.jpg') top center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: absolute; top: 0;
+	width: 100%; height: 100%;
+	z-index: -1;
+	-webkit-animation: pulse 20s 0 infinite ease-out;
+}
+
+#smoke {
+	background: url('../img/smoke.png') top center no-repeat;
+	position: absolute; top: 0; left: -1832px;
+	background-size: cover;
+	width: 1832px; height: 500px;
+	z-index: 1;
+	-webkit-animation: fadeInRight 20s infinite linear;
+}
+
+#roadblockFrame {
+	width: 900px; height: 500px; overflow: hidden; margin: 0; position: relative;
+}
+
+#row-main, #container-main, .col-xs-6, .col-sm-6, .col-md-6 {height: 100%}
+
+#col-content {position: relative; z-index: 10; height: 100%}
+	#col-content .inner-frame {
+		position: absolute; top: 50%; margin-top: -225px;
+		height: 450px; width: 95%; 
+		z-index: 11;
+	}
+	h1#headline {
+		text-transform: uppercase; 
+		font-style: italic; font-weight: 800; 
+		text-align: center; 
+		margin-top: 150px;
+		color: #FFF;
+		text-shadow: 1px 1px 10px black;
+	}
+	h1#headline span {display: block;}
+		h1#headline span.text1 {
+			font-size: 56px;
+			-webkit-animation-delay: 1s;
+		}
+		h1#headline span.text2 {
+			font-size: 36px;
+			-webkit-animation-delay: 1.5s;
+		}
+	a#btn-action {
+		width: 300px; 
+		position: absolute; left: 50%; margin-left: -150px; margin-top: 50px;
+		text-transform: uppercase; font-weight: 400;
+		-webkit-animation-delay: 2s;
+	}
+
+#char-joker {
+	width: 365px; min-height: 500px;
+	position: absolute; top: 10px;
+	background: url('../img/char-joker.png') top center no-repeat;
+	background-size: cover;
+	z-index: 2;
+	-webkit-animation: lightSpeedIn 1s ease-out, pulse 5s 1s infinite ease-out;
+}
+
+#logo-dcuo {
+	background: url('../img/logo-dcuo.png') top center no-repeat;
+	width: 408px; height: 77px;
+	position: absolute;
+	left: 50%; margin-left: -204px;	z-index: 12;
+	-webkit-animation: flip 1s 0 ease-out;
+}
+
+small.copyright {
+	position: absolute; left: 0; bottom: 0;
+	width: 100%;
+	color: #fff;text-shadow: 2px 2px #000;
+	padding-top: 15px; display: block;
+}
+
+.animate-infinite {
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.animate-transition {
+	-webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.cf-exo {font-family: 'Exo 2', sans-serif;}
